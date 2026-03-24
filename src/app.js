@@ -20,7 +20,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/invoices', invoiceRoutes);
 app.use('/api/stats', statsRoutes);
-
+app.use("/api/users", userRoutes);
 app.get('/', (req, res) => {
   res.send('API is running...');
 });
