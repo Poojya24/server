@@ -26,7 +26,7 @@ npm test
 
 ### **A. User Registration**
 ```bash
-curl -X POST http://localhost:5000/api/users/register \
+curl -X POST https://server-1-a19b.onrender.com/api/users/register \
      -H "Content-Type: application/json" \
      -d '{"name": "Admin", "email": "admin@example.com", "password": "password123"}'
 ```
@@ -34,7 +34,7 @@ curl -X POST http://localhost:5000/api/users/register \
 ### **B. User Login**
 (Save the returned `token` to use in subsequent requests)
 ```bash
-curl -X POST http://localhost:5000/api/users/login \
+curl -X POST https://server-1-a19b.onrender.com/api/users/login \
      -H "Content-Type: application/json" \
      -d '{"email": "admin@example.com", "password": "password123"}'
 ```
@@ -42,7 +42,7 @@ curl -X POST http://localhost:5000/api/users/login \
 ### **C. Create Product**
 (Replace `YOUR_TOKEN_HERE` with the token from Step B)
 ```bash
-curl -X POST http://localhost:5000/api/products \
+curl -X POST https://server-1-a19b.onrender.com/api/products \
      -H "Authorization: Bearer YOUR_TOKEN_HERE" \
      -H "Content-Type: application/json" \
      -d '{"name": "Test Product", "productId": "TP001", "category": "Electronics", "price": 100, "quantity": 50, "unit": "pcs", "thresholdValue": 5}'
@@ -51,7 +51,7 @@ curl -X POST http://localhost:5000/api/products \
 ### **D. Buy Simulation**
 (Replace `PRODUCT_ID` and `YOUR_TOKEN_HERE`)
 ```bash
-curl -X POST http://localhost:5000/api/products/PRODUCT_ID/buy \
+curl -X POST https://server-1-a19b.onrender.com/api/products/PRODUCT_ID/buy \
      -H "Authorization: Bearer YOUR_TOKEN_HERE" \
      -H "Content-Type: application/json" \
      -d '{"quantity": 2}'
@@ -59,7 +59,7 @@ curl -X POST http://localhost:5000/api/products/PRODUCT_ID/buy \
 
 ### **E. Get Statistics**
 ```bash
-curl -X GET http://localhost:5000/api/stats/summary \
+curl -X GET https://server-1-a19b.onrender.com/api/stats/summary \
      -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
 
